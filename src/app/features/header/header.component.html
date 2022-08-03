@@ -1,0 +1,48 @@
+<nav id="#navbar-example2" class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img
+        src="https://cdn-icons.flaticon.com/png/512/4926/premium/4926581.png?token=exp=1659484371~hmac=71c84562ea6aa4c493cc9447ef31df8f"
+        alt="" width="30" height="24" class="d-inline-block align-text-top">
+      Fidel Huarcaya</a>
+    <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+      aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="d-flex justify-content-end ">
+        <i class="fa fa-bars"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarExample01">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link px-3" href="#about">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#experience">Experiencia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#work">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#contact">Contáctame</a>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</nav>
+<app-home></app-home>
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+
+  <h4 id="about"> </h4>
+    <app-about></app-about>
+ 
+  <div id="experience">
+    <app-experience></app-experience>
+  </div>
+  <div id="work"></div>
+  <app-work></app-work>
+  <h4 id="contact"></h4>
+  <app-contact></app-contact>
+
+</div>

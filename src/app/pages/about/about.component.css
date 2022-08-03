@@ -1,0 +1,9 @@
+.container{
+    padding: 8% 0%;
+   }
+   h2{
+    padding: 10px 1px;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+   }
