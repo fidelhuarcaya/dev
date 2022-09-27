@@ -1,10 +1,10 @@
 .navbar-brand {
     letter-spacing: 3px;
-    color: #c24244;
+    color: #428bc2;
 }
 
 .navbar-brand:hover {
-    color: #c24244;
+    color: #fcfcfc;
 }
 
 .navbar-scroll .nav-link,

@@ -12,8 +12,11 @@ import { WorkComponent } from './pages/work/work.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './features/footer/footer.component';
 import { FormsModule } from '@angular/forms';
-
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from "@angular/material/button";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +28,20 @@ import { FormsModule } from '@angular/forms';
     WorkComponent,
     ContactComponent,
     FooterComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, FormsModule
+    AppRoutingModule,
+    FormsModule, 
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -2,7 +2,7 @@
 button {
     font-family: inherit;
     font-size: 20px;
-    background: #ff6601;
+    background: #01a6ff;
     color: white;
     padding: 0.7em 1em;
     padding-left: 0.9em;
@@ -12,6 +12,7 @@ button {
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.2s;
+
    }
    
    button span {
@@ -52,18 +53,23 @@ button {
     }
    }
    .container{
-    padding: 20% 10%;
+    padding: 10% 10%;
+    padding-bottom: 10rem;
    }
    h1{
  
     font-weight: bold;
-
+    padding-bottom: 1.2rem;
     
    }
    h2{
-    
+    padding-bottom: 1.2rem;
     color: antiquewhite;
    }
+   p{
+    padding-bottom: 2rem;
+   }
    .contact{
+    
     color: aliceblue;
    }
