@@ -8,7 +8,7 @@ import { Email } from '../model/Message';
   providedIn: 'root'
 })
 export class EmailService {
-  base_url="http://localhost:8080/api/sendemail"
+  base_url="https://send-email-api-rest.herokuapp.com/api/sendemail"
  
   httpOptions = {
     headers: new HttpHeaders({
