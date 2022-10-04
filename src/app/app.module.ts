@@ -11,12 +11,13 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 import { WorkComponent } from './pages/work/work.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './features/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,9 @@ import {MatInputModule} from '@angular/material/input';
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
 
   providers: [],
