@@ -1,21 +1,43 @@
-.container{
-    padding: 7% 20%;
-   }   
-   
-   h1{
-    padding: 1px 10px;
-    margin-bottom: 3rem;
+.container {
 
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  padding-top: 12%;
+ 
+  padding-bottom: 14%;
+  padding-left: 3%;
+  padding-right: 8%;
+
+}
+
+h1 {
+  padding: 1px 10px;
+  margin-bottom: 3rem;
+
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .example-form {
-    min-width: 150px;
-    max-width: 90%;
-    width: 100%;
-  }
+ 
+  justify-content: center;
+  text-align: center;
   
-  .example-full-width {
-    width: 100%;
-  }
+
+}
+
+.example-full-width {
+
+  line-height: 1.5;
+  min-width: max-content;
+  width: 100%;
+  max-width: 100%;
+
+  
+}
+.container>div{
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+ 
+  margin-bottom: 5rem;
+}

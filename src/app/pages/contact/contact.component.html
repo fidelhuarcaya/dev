@@ -3,9 +3,9 @@
   <form class="example-form" [formGroup]="emailForm">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Nombre</mat-label>
-      <input id="name" class="form-control" required minlength="4" type="email"
-      matInput placeholder="Ej: Jhon Doe" formControlName="name">
-  
+      <input id="name" class="form-control" required minlength="4" type="email" matInput placeholder="Ej: Jhon Doe"
+        formControlName="name">
+
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Correo</mat-label>
@@ -16,7 +16,10 @@
       <mat-label>Mensaje</mat-label>
       <textarea required minlength="4" matInput placeholder="Escriba el mensaje..." formControlName="body"></textarea>
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="sendEmail()">Enviar mensaje <mat-icon>send_rounded</mat-icon>
-      </button>
+ 
   </form>
+<div class="example-full-width"><button  mat-raised-button color="primary" (click)="sendEmail()">Enviar mensaje <mat-icon>
+        send_rounded</mat-icon>
+    </button></div>
+
 </div>
