@@ -1,5 +1,7 @@
 import { BuiltinTypeName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import * as Notiflix from 'notiflix';
+import { Loading } from 'notiflix';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+
 }
 
 

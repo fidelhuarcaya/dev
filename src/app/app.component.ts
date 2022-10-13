@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as Notiflix from 'notiflix';
 
 
 @Component({
@@ -6,7 +7,14 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  constructor(){
+    Notiflix.Loading.dots();
+    Notiflix.Loading.remove(2000)
+  }
+  ngOnInit(): void {
+    
+  }
   title = 'fidelhuarcaya-web';
   currentSection = 'section1';
 

@@ -1,6 +1,6 @@
 .navbar-brand {
-    letter-spacing: 3px;
     color: #428bc2;
+    font-size: 59px;
 }
 
 .navbar-brand:hover {
@@ -19,4 +19,14 @@
 
 .navbar-scrolled {
     background-color: #ffede7;
+}
+
+.nav-item>a{
+    font-size:1.3rem;
+}
+.nav-item>a:hover{
+    color:#01a6ff
+}
+.nav-item::before{
+    color:#01a6ff
 }

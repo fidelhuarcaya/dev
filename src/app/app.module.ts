@@ -18,6 +18,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatInputModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
 
   providers: [],

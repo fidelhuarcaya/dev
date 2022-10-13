@@ -1,5 +1,5 @@
 .container{
-    padding: 7% 25%;
+    padding: 7% 20%;
    }   
    
    h1{
@@ -12,7 +12,7 @@
 
 .example-form {
     min-width: 150px;
-    max-width: 500px;
+    max-width: 90%;
     width: 100%;
   }
   

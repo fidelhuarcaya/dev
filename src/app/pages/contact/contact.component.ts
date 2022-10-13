@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+import * as Notiflix from 'notiflix';
+import { Report } from 'notiflix';
 import { Email } from 'src/app/model/Message';
 import { EmailService } from 'src/app/services/email-service.service';
 
@@ -24,14 +26,26 @@ export class ContactComponent implements OnInit {
   }
   sendEmail() {
     console.log("start request")
+    
     if (this.emailForm.valid) {
-      alert("Tu mensaje fue enviado")
+    
       this.service.sendEmail(this.emailForm.value).subscribe((response: any) => {
 
       })
       this.emailForm.controls['name'].setValue("")
       this.emailForm.controls['email'].setValue("")
       this.emailForm.controls['body'].setValue("")
+      this.confirm()
     }
   }
-}
+  public failure(){
+    
+  }
+
+  public confirm(){
+    Report.success(
+      'Mensaje enviado',
+      'Tu mensaje fue enviado con éxito, recibiras la respuesta en breve...',
+      'De acuerdo',
+      );
+  }}
