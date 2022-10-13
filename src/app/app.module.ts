@@ -19,6 +19,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { Loading } from 'notiflix/build/notiflix-loading-aio';
     MatInputModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatIconModule,
   ],
 
   providers: [],
