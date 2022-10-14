@@ -1,21 +1,28 @@
-#card{
-   
-    background-color: 
-}
-.col>.card1{
+#card {}
 
-}
-.card>a{
+.col>.card1 {}
+
+.card>a {
     margin-top: 22px;
 
 }
-h5{
-    font-weight: 600;
+
+h5 {
+    font-weight: 700;
+    font-size: 24px;
 }
-.card{
+
+.card {
     background-color: #262626;
     align-items: center;
     align-content: center;
+    margin-top: 3%;
+}
 
+.btn-card {
+    margin-top: 2rem;
+}
 
+.card-text {
+    height: 60px;
 }
