@@ -18,8 +18,11 @@ import { MatButtonModule } from "@angular/material/button";
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import {MatIconModule} from '@angular/material/icon';
+import {MatStepperModule} from '@angular/material/stepper';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SideNavComponent } from './features/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import {MatIconModule} from '@angular/material/icon';
     ExperienceComponent,
     WorkComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    SideNavComponent
     
   ],
   imports: [
@@ -45,9 +49,22 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatStepperModule,
+    MatSidenavModule,
   ],
 
-  providers: [],
+  providers:  [
+
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { displayDefaultIndicatorType: false }
+    },
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: { showError: true }
+    },
+   
+  ],
   bootstrap: [AppComponent],
    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

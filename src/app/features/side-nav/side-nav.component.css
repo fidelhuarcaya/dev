@@ -1,0 +1,25 @@
+.side{
+    position:fixed;
+    left: 2%;
+    bottom: 0;
+   
+}
+a{
+    margin-top: 60%;
+}
+.column{
+    display: inline-grid;
+     align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+.line{
+   margin: 0 0;
+
+   
+}
+.colored{
+   
+background-color: #415c78;
+}
