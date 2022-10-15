@@ -82,3 +82,9 @@
     padding-top: 6px;
 
 }
+a>p{
+    color: aliceblue;
+}
+a>p:hover{
+    color: #069fff;
+}

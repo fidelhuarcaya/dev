@@ -29,3 +29,14 @@
 .nav-item::before{
     color:#01a6ff
 }
+
+.content{
+    margin-top: 110px;
+    margin-bottom: 16%;
+    margin-left: 16%;
+    margin-right: 8%;
+
+}
+.home{
+    margin: 12% 2%; 
+}
