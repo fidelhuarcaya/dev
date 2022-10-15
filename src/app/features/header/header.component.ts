@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   getPadding(){
     if(this.isVersionDesktop)
     return '12%';
-    else return '0%';
+    else return '2%';
   }
 
 }
