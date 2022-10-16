@@ -1,10 +1,11 @@
 <div class="container">
   <h1>Contáctame</h1>
+  <p>Para nuevos proyectos, consulta freelance mi bandeja de entrada siempre está abierta.
+    Ya sea que tenga una pregunta o simplemente quiera saludar, ¡haré todo lo posible para responderle!</p>
   <form class="example-form" [formGroup]="emailForm">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Nombres</mat-label>
-      <input required minlength="4"  matInput placeholder="Ej: Jhon Doe"
-        formControlName="name">
+      <input required minlength="4" matInput placeholder="Ej: Jhon Doe" formControlName="name">
 
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
@@ -16,10 +17,11 @@
       <mat-label>Mensaje</mat-label>
       <textarea required minlength="4" matInput placeholder="Escriba el mensaje..." formControlName="body"></textarea>
     </mat-form-field>
- 
+
+      <button class="send-btn" mat-raised-button color="primary" (click)="sendEmail()">Enviar mensaje 
+      </button>
+    
   </form>
-<div class="example-full-width"><button  mat-raised-button color="primary" (click)="sendEmail()">Enviar mensaje <mat-icon>
-        send_rounded</mat-icon>
-    </button></div>
+
 
 </div>

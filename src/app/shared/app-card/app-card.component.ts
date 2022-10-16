@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-app-card',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-card.component.css']
 })
 export class AppCardComponent implements OnInit {
-
-  constructor() { }
+  isVersionDesktop: Boolean = true;
+  constructor(public device: DeviceDetectorService, ) { 
+    this.isVersionDesktop = this.device.isDesktop();
+  }
 
   ngOnInit(): void {
   }

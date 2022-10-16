@@ -1,7 +1,6 @@
 .container{
     padding-top: 10%;
-    /*padding-left: 8%;
-    padding-right: 8%;*/
+
    }
 
    .card{
@@ -10,7 +9,7 @@
   
    }
    h1{
-    padding: 80px 0px;
+    padding-top: 80px;
     font-weight: bold;   
     font-size: 40px;
     line-height: 3.5rem;
@@ -38,6 +37,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    line-height: 1.7rem;
    }
    
    .item:hover {
@@ -79,11 +80,16 @@
    }
    
    .text--1 {
-    color: rgba(149,149,255,1);
+    color: rgb(255, 255, 255);  
+    padding-top: 1.2rem;
+    font-size: 18px;
    }
    
    .text--2 {
-    color: rgba(252,161,71,1);
+    color: rgb(243, 239, 234);
+  
+    padding-top: 1.2rem;
+    font-size: 18px;
    }
    
    .text--3 {

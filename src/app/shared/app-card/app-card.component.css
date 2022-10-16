@@ -1,6 +1,4 @@
-#card {}
 
-.col>.card1 {}
 
 .card>a {
     margin-top: 22px;
@@ -17,12 +15,27 @@ h5 {
     align-items: center;
     align-content: center;
     margin-top: 3%;
+    line-height: 1rem;
 }
 
 .btn-card {
     margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
-
+.btn-card>a {
+    margin-bottom: 1.2rem;
+}
+.card-title{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 .card-text {
-    height: 60px;
+    height: 4rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 6rem;
+
 }
