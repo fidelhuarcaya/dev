@@ -23,6 +23,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { SideNavComponent } from './features/side-nav/side-nav.component';
+import { WebComponent } from './shared/web/web.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { SideNavComponent } from './features/side-nav/side-nav.component';
     WorkComponent,
     ContactComponent,
     FooterComponent,
-    SideNavComponent
+    SideNavComponent,
+    WebComponent
     
   ],
   imports: [
@@ -51,6 +54,7 @@ import { SideNavComponent } from './features/side-nav/side-nav.component';
     MatIconModule,
     MatStepperModule,
     MatSidenavModule,
+    MatCardModule,
   ],
 
   providers:  [
