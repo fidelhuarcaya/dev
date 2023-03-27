@@ -25,17 +25,18 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
   sendEmail() {
-    console.log("start request")
+
     
     if (this.emailForm.valid) {
     
       this.service.sendEmail(this.emailForm.value).subscribe((response: any) => {
 
       })
-      this.emailForm.controls['name'].setValue("")
-      this.emailForm.controls['email'].setValue("")
-      this.emailForm.controls['body'].setValue("")
-      this.confirm()
+
+      this.confirm()      
+      this.emailForm.controls['name'].setValue(" ")
+      this.emailForm.controls['email'].setValue(" ")
+      this.emailForm.controls['body'].setValue(" ")
     }
   }
   public failure(){
