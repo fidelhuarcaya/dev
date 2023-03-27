@@ -2,23 +2,23 @@
   <h1>Contáctame</h1>
   <p>Para nuevos proyectos, consulta freelance mi bandeja de entrada siempre está abierta.
     Ya sea que tenga una pregunta o simplemente quiera saludar, ¡haré todo lo posible para responderle!</p>
-  <form class="example-form" [formGroup]="emailForm">
+  <form class="example-form" [formGroup]="emailForm" (submit)="sendEmail()">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Nombres</mat-label>
-      <input required minlength="4" matInput placeholder="Ej: Jhon Doe" formControlName="name">
+      <input minlength="4" matInput placeholder="Ej: Jhon Doe" formControlName="name">
 
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Correo</mat-label>
-      <input required minlength="6" matInput placeholder="jhondoe@example.com" formControlName="email">
+      <input minlength="6" matInput placeholder="jhondoe@example.com" formControlName="email">
 
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Mensaje</mat-label>
-      <textarea required minlength="4" matInput placeholder="Escriba el mensaje..." formControlName="body"></textarea>
+      <textarea minlength="4" matInput placeholder="Escriba el mensaje..." formControlName="body"></textarea>
     </mat-form-field>
 
-      <button class="send-btn" mat-raised-button color="primary" (click)="sendEmail()">Enviar mensaje 
+      <button class="send-btn" mat-raised-button color="primary" type="submit">Enviar mensaje 
       </button>
     
   </form>
