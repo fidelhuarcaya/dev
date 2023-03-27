@@ -8,7 +8,7 @@ import { Email } from '../model/Message';
   providedIn: 'root'
 })
 export class EmailService {
-  base_url="https://send-email-api-rest.herokuapp.com/api/sendemail"
+  base_url="https://ms-emails.azurewebsites.net/emails/send"
  
   httpOptions = {
     headers: new HttpHeaders({
@@ -21,8 +21,9 @@ export class EmailService {
 
   sendEmail(email:Email): Observable<Email>{
     const body=JSON.stringify(email)
-    console.log("body is: "+body)
-    console.log(body)
+    /*console.log("body is: "+body)
+    console.log(body)*/
+  
     return this.http
       .post<Email>(this.base_url,
          JSON.stringify(email),this.httpOptions);
