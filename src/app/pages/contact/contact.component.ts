@@ -15,10 +15,10 @@ export class ContactComponent implements OnInit {
   emailForm = new FormGroup({
     name: new FormControl('', [
       Validators.nullValidator,
-      Validators.minLength(4), Validators.required]), 
+      Validators.minLength(4), Validators.required]),
     email: new FormControl('',
       [Validators.email, Validators.required]),
-    body: new FormControl('',Validators.required)
+    body: new FormControl('', Validators.required)
   })
   constructor(public service: EmailService) { }
 
@@ -30,9 +30,9 @@ export class ContactComponent implements OnInit {
     if (this.emailForm.valid) {
 
       this.service.sendEmail(this.emailForm.value).subscribe((response: any) => {
-        
+
       })
-this.emailForm.reset();
+      this.emailForm.reset();
       this.confirm()
 
 
