@@ -1,27 +1,59 @@
+<p-toast></p-toast>
 <div class="container">
-  <h1>Contáctame</h1>
-  <p>Para nuevos proyectos, consulta freelance mi bandeja de entrada siempre está abierta.
-    Ya sea que tenga una pregunta o simplemente quiera saludar, ¡haré todo lo posible para responderle!</p>
-  <form class="example-form" [formGroup]="emailForm" (submit)="sendEmail()">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Nombres</mat-label>
-      <input minlength="4" matInput placeholder="Ej: Jhon Doe" formControlName="name">
+    <p style="line-height: 2rem; font-size: large;">Para nuevos proyectos, consulta freelance mi bandeja de entrada
+        siempre está abierta.
+        Ya sea que tenga una pregunta o simplemente quiera saludar, ¡haré todo lo posible para responderle!</p>
+    <form class="example-form" [formGroup]="emailForm" (submit)="sendEmail()">
+        <div class="flex flex-column gap-3">
+            <div class="flex flex-column gap-2 " >
+                <label style="font-weight: 700; ">Nombres</label>
+                <input minlength="4" pInputText placeholder="Ej: Fidel Huarcaya" formControlName="name" 
+                aria-describedby="username2-help" class="p-invalid"
+                    style="box-shadow: none;background-color: #303245; color: #ffffff; border-width: 2px;">
+                    <small *ngIf="!invalidForm&& this.emailForm.get('name')?.invalid" 
+                    id="username2-help" class="p-invalid">El nombre nombre es obligatorio.</small>
+            </div>
+            <div class="flex flex-column gap-2">
+                <label style="font-weight: 700; ">Correo</label>
+                <input minlength="6" pInputText placeholder="contacto@example.com" formControlName="email"
+                    style="box-shadow: none;background-color: #303245;color: #ffffff;border-width: 2px;">
+                    <small *ngIf="!invalidForm&& this.emailForm.get('email')?.invalid" id="username2-help" 
+                    class="p-invalid">El correo es obligatorio.</small>
+            </div>
+            <div class="flex flex-column gap-2">
+                <label style="font-weight: 700; ">Mensaje</label>
+                <textarea minlength="4" pInputText placeholder="Escriba el mensaje..." formControlName="body"
+                    style="box-shadow: none;background-color: #303245;color: #ffffff;border-width: 2px;"></textarea>
+                    <small *ngIf="!invalidForm&& this.emailForm.get('body')?.invalid" id="username2-help" 
+                    class="p-invalid">El mensaje es obligatorio.</small>
+            </div>
+            <div class="flex justify-content-start" style="margin-top: 2rem;">
 
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Correo</mat-label>
-      <input minlength="6" matInput placeholder="jhondoe@example.com" formControlName="email">
 
-    </mat-form-field>
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Mensaje</mat-label>
-      <textarea minlength="4" matInput placeholder="Escriba el mensaje..." formControlName="body"></textarea>
-    </mat-form-field>
+                <button pButton (click)="onClick()" style="box-shadow: none; width: 15rem;" 
+                 label="Enviar mensaje">
+                    
+                        <svg *ngIf="!showSend" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            enable-background="new 0 0 512 512" xml:space="preserve" style="position: absolute; top: 3px; right: 1rem;">
+                            <path
+                                d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z M202.992,332.528v124.517l58.738-67.927L202.992,332.528z">
+                            </path>
+                        </svg>
+                   
+                    <svg *ngIf="showSend" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                        enable-background="new 0 0 512 512" xml:space="preserve">
+                        <path id="paper-plane-icon"
+                            d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z M202.992,332.528v124.517l58.738-67.927L202.992,332.528z">
+                        </path>
+                    </svg>
+                </button>
 
-      <button class="send-btn" mat-raised-button color="primary" type="submit">Enviar mensaje 
-      </button>
-    
-  </form>
 
 
+            </div>
+        </div>
+
+    </form>
 </div>

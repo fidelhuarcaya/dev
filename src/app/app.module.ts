@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,13 +12,22 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 import { WorkComponent } from './pages/work/work.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { FooterComponent } from './features/footer/footer.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { WebComponent } from './shared/web/web.component';
+import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
+import { SideNavComponent } from './features/side-nav/side-nav.component';
+import { TimelineModule } from 'primeng/timeline';
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
+import { EmailDialogComponent } from './shared/email-dialog/email-dialog.component';
+import { MessageService } from 'primeng/api';
+import {ToastModule} from 'primeng/toast';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,32 +39,31 @@ import { ButtonModule } from 'primeng/button';
     WorkComponent,
     ContactComponent,
     FooterComponent,
-    WebComponent
-    
+    WebComponent,
+    SideNavComponent,
+    EmailDialogComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, 
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-
+    CommonModule,
+    ButtonModule,
+    TimelineModule,
+    CardModule,
+    InputTextModule,
+    DynamicDialogModule,
+    ToastModule,
   ],
 
-  providers:  [
-
-    {
-      provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: { displayDefaultIndicatorType: false }
-    },
-    {
-      provide: STEPPER_GLOBAL_OPTIONS,
-      useValue: { showError: true }
-    },
-   
+  providers: [
+    DialogService,
+    MessageService
   ],
   bootstrap: [AppComponent],
-   schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

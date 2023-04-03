@@ -1,4 +1,4 @@
-/* From uiverse.io by @adamgiebl */
+
 ._button {
     font-family: inherit;
     font-size: 20px;
@@ -13,6 +13,10 @@
     overflow: hidden;
     transition: all 0.2s;
 
+}
+.description{
+    max-width: 50rem;
+    margin-bottom: 4rem;
 }
 
 ._button span {
@@ -87,3 +91,12 @@ p {
 
     color: aliceblue;
 }
+::ng-deep .p-dialog .p-dialog-header {
+    background-color: #15172b;
+    color: white;
+}
+::ng-deep .p-dialog .p-dialog-content{
+    background-color: #15172b;
+    color: white;
+}
+

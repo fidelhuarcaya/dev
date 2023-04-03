@@ -1,21 +1,35 @@
 <div class="container">
   <div class="dev">
     <h1>Fidel Huarcaya</h1>
-    <h2>Desarrollador de software</h2>
-    <p>
-      Experiencia en proyectos de desarrollo de aplicaciones web y movil .
-    </p>
-    <div class="flex flex-row gap-3">
-      <button class="center  _button">
-        <div class="svg-wrapper">
-          <span class="fa fa-comment"></span>
+
+    <h2 [ngStyle]="{'font-weight': 'bold'}">
+      {{ texto.substring(0, longitudTextoMostrado) }}
+      <span *ngIf="mostrarCursor" class="cursor" style="color: rgb(31, 117, 255);">|</span>
+    </h2>
+      <div class="description flex flex-column">
+        <div style="color: rgb(31, 117, 255);" class="flex flex-row">
+          
+          <span style="color: rgb(253, 253, 253);font-size: 20px; font-weight: 200;">
+            <span style="color: rgb(31, 117, 255); font-size: 24px; margin-right: 2px;"> <</span> Desarrollador de aplicaciones web y móvil. 
+          Enfocado en mejorar constantemente las habilidades y conocimientos para poder crear soluciones innovadoras
+          <span style="color: rgb(31, 117, 255);font-size: 24px; margin-left: 2px; ">/></span></span >
+          
         </div>
-        <a href="#contact">
-          <span class="contact">Contáctame </span></a>
+        <div style="color: rgb(31, 117, 255);" class="flex flex-row">
+          
+          <span style="color: rgb(253, 253, 253); font-size: 20px; font-weight: 200;">
+            <span style="color: rgb(31, 117, 255);font-size: 24px; margin-right: 2px; "> <</span> 
+            Mi objetivo es ofrecer una experiencia de usuario excepcional y funcionalidad de alto nivel a través de aplicaciones.
+            <span style="color: rgb(31, 117, 255);font-size: 24px; margin-left: 2px; ">/></span></span>
+        
+        </div>
+      </div>
+    <div class="flex flex-row gap-3">
+      <button pButton style="box-shadow: none;" (click)="show()" label="Contáctame" icon="pi pi-send" iconPos="right">
       </button>
-      <button>
-        Descargar CV
-      </button>
+      <button pButton style="box-shadow: none;" (click)="showCV()" label="Descargar CV" class="p-button-outlined"
+        icon="pi pi-download"></button>
+        
     </div>
   </div>
 </div>

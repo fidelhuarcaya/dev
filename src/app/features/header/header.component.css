@@ -20,24 +20,28 @@
     background-color: #ffede7;
 }
 
-.nav-item>a{
-    font-size:1.3rem;
-}
-.nav-item>a:hover{
-    color:#01a6ff
-}
-.nav-item::before{
-    color:#01a6ff
+.nav-item>a {
+    font-size: 1.3rem;
 }
 
-.content{
-   /* margin-top: 210px;*/
+.nav-item>a:hover {
+    color: #01a6ff
+}
+
+.nav-item::before {
+    color: #01a6ff
+}
+
+.content {
+    /* margin-top: 210px;*/
+    margin-top: 10%;
     margin-bottom: 18%;
     /*padding-left: 10%;*/
-   
+
 
 }
-.home{
-    margin: 12% 2%; 
+
+.home {
+    margin: 12% 2%;
     margin-bottom: 12%;
 }

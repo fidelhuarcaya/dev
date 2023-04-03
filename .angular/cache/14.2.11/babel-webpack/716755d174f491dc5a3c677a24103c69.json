@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default class Utils {\n  static abrirPDF(url) {\n    window.open(url, '_blank');\n  }\n}","map":null,"metadata":{},"sourceType":"module"}

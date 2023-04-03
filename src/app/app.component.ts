@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as Notiflix from 'notiflix';
 
 
 @Component({
@@ -9,8 +8,7 @@ import * as Notiflix from 'notiflix';
 })
 export class AppComponent implements OnInit{
   constructor(){
-    Notiflix.Loading.dots();
-    Notiflix.Loading.remove(2000)
+
   }
   ngOnInit(): void {
     

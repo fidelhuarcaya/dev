@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-header',
@@ -7,27 +6,12 @@ import { DeviceDetectorService } from 'ngx-device-detector';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isVersionDesktop = false;
-  constructor(
-    public device: DeviceDetectorService, ) { 
-      this.isVersionDesktop=device.isDesktop();
+
+  constructor() { 
+      
     }
 
   ngOnInit(): void {
   }
-  getPadding(){
-    if(this.isVersionDesktop)
-    return '12%';
-    else return '2%';
-  }
-  getPaddingTop(){
-    if(this.isVersionDesktop)
-    return '13%';
-    else return '22%';
-  }
-  getPaddingRigth(){
-    if(this.isVersionDesktop)
-    return '12%';
-    else return '2%';
-  }
+
 }

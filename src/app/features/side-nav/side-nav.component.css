@@ -2,6 +2,7 @@
     position:fixed;
     left: 2%;
     bottom: 0;
+    z-index: 1000;
    
 }
 a{
@@ -16,10 +17,11 @@ a{
 }
 .line{
    margin: 0 0;
-
+   background-color: #00aeffb5;
    
 }
 .colored{
    
-background-color: #415c78;
+background-color: #ff0008;
+
 }

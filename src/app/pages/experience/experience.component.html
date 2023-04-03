@@ -2,32 +2,33 @@
     <h1>Experiencia</h1>
 
     <div class="step-container">
-        <mat-vertical-stepper class="step-container">
-            <mat-step label="Oct 2021 - Mar 2022">
 
-                <h2>Java Developer, Android en Alpha Neo </h2>
-                <ul>
-                    <li>
-                        <p>Integración de compras en la aplicación.</p>
-                    </li>
-                    <li>
-                        <p>Desarrollo de aplicaciones Android y actualizaciones
-                            de la misma.</p>
-                    </li>
-                    <li>
-                        <p>Correción de bugs.</p>
-                    </li>
-                </ul>
+        <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+            <ng-template pTemplate="marker" let-event>
+                <span class="custom-marker shadow-2" >
+                    <h3>{{event.header}}</h3>
+                </span>
+            </ng-template>
+            <ng-template pTemplate="content" let-event>
+                <p-card [header]="event.status" [subheader]="event.subtitle" styleClass="card-red">
 
-                <div>
-                    <button mat-button matStepperNext>Siguiente</button>
-                </div>
-            </mat-step>
-        <mat-step label="Mar 2022 - Actualidad">
+                        <div style="text-align: left;">
+                            <ul *ngFor="let description of event.descriptions">
+                                <li>
+                                    <p>{{description}}</p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                
+                    <!--<button pButton label="Read more" class="p-button-text" style="color: brown;"></button>-->
+                </p-card>
+    
+            </ng-template>
+        </p-timeline>
 
-        </mat-step>
 
-           
-        </mat-vertical-stepper>
+
     </div>
+   
 </div>

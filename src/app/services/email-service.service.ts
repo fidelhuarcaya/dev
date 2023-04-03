@@ -20,10 +20,6 @@ export class EmailService {
   constructor(private http: HttpClient) { }
 
   sendEmail(email:Email): Observable<Email>{
-    const body=JSON.stringify(email)
-    /*console.log("body is: "+body)
-    console.log(body)*/
-  
     return this.http
       .post<Email>(this.base_url,
          JSON.stringify(email),this.httpOptions);

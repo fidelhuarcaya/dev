@@ -2,3 +2,26 @@
 
 html, body { height: 100%; }
 body { margin: 0; }
+
+button{
+    box-shadow: none;
+}
+
+  /* Personalizar el scroll para Google Chrome, Safari y Opera */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #262626;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #11a1ee;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #67a4ff;
+  }
+  
