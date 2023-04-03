@@ -1,5 +1,4 @@
 
-
 .card>a {
     margin-top: 22px;
 
@@ -11,7 +10,7 @@ h5 {
 }
 
 .card {
-    background-color: #262626;
+    background-color: #323131;
     align-items: center;
     align-content: center;
     margin-top: 3%;
@@ -39,3 +38,16 @@ h5 {
     padding-bottom: 6rem;
 
 }
+@media (max-width: 767px) {
+    .flex-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .card {
+      width: 45%;
+      margin: 1%;
+    }
+  }
+  
