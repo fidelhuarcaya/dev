@@ -39,6 +39,7 @@ export class EmailDialogComponent implements OnInit {
       email: this.emailForm.value.email ?? ''
     }
     this.service.sendEmail(this.email).subscribe((response: any) => {
+      this.addSingle();
 
     })
     this.emailForm.reset();
@@ -65,11 +66,12 @@ export class EmailDialogComponent implements OnInit {
     const button = this.elementRef.nativeElement.querySelector('button');
     button.classList.toggle('clicked');
     
-    this.sendEmail();this.addSingle();
+    this.sendEmail();
     /*const buttonText = button.querySelector('p');*/
     //buttonText.textContent = button.label === 'Tu mensaje se ha enviado' ? 'Enviar mensaje' : 'Tu mensaje se ha enviado';
   }
   addSingle() {
-    this.messageService.add({severity:'success', summary:'Mensaje enviado', detail:'Su mensaje a sido recibido exitosamente.'});
+    this.messageService.add({severity:'success', summary:'Mensaje enviado',
+     detail:'Su mensaje a sido recibido exitosamente.'});
 }
 }
