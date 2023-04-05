@@ -15,7 +15,7 @@ export class ContactComponent implements OnInit {
   emailForm = new FormGroup({
     name: new FormControl('', [Validators.minLength(4), Validators.required]),
     email: new FormControl('', [Validators.email, Validators.required]),
-    body: new FormControl('', Validators.required)
+    message: new FormControl('', Validators.required)
   });
   buttonLabel = 'Send';
   showSend = false;  
@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
 
     this.email = {
       name: this.emailForm.value.name ?? '',
-      body: this.emailForm.value.body ?? '',
+      message: this.emailForm.value.message ?? '',
       email: this.emailForm.value.email ?? ''
     }
     this.service.sendEmail(this.email).subscribe((response: any) => {

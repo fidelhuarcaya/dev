@@ -1,6 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { error } from 'console';
 import { MessageService } from 'primeng/api';
 import { Email } from 'src/app/model/Message';
 import { EmailService } from 'src/app/services/email-service.service';
@@ -17,13 +18,13 @@ export class EmailDialogComponent implements OnInit {
   emailForm = new FormGroup({
     name: new FormControl('', [Validators.minLength(4), Validators.required]),
     email: new FormControl('', [Validators.email, Validators.required]),
-    body: new FormControl('', Validators.required)
+    message: new FormControl('', Validators.required)
   })
   isClicked = false;
   buttonLabel = 'Send';
   showSend = false;
   constructor(public service: EmailService,
-    private elementRef: ElementRef,private messageService: MessageService) { }
+    private elementRef: ElementRef, private messageService: MessageService) { }
 
   ngOnInit(): void {
 
@@ -32,16 +33,27 @@ export class EmailDialogComponent implements OnInit {
     if (this.emailForm.invalid) {
       return;
     }
-
+    this.addSingle();
     this.email = {
       name: this.emailForm.value.name ?? '',
-      body: this.emailForm.value.body ?? '',
-      email: this.emailForm.value.email ?? ''
+      email: this.emailForm.value.email ?? '',
+      message: this.emailForm.value.message ?? '',
     }
-    this.service.sendEmail(this.email).subscribe((response: any) => {
-      this.addSingle();
+    this.service.sendEmail(this.email)
+      .subscribe({
+        next: (response) => {
 
-    })
+
+        },
+        error: (e) => {
+          //console.log(e.message)
+        },
+        complete: () => {
+          
+        }
+
+
+      })
     this.emailForm.reset();
 
 
@@ -65,13 +77,15 @@ export class EmailDialogComponent implements OnInit {
     this.invalidForm = true;
     const button = this.elementRef.nativeElement.querySelector('button');
     button.classList.toggle('clicked');
-    
+
     this.sendEmail();
     /*const buttonText = button.querySelector('p');*/
     //buttonText.textContent = button.label === 'Tu mensaje se ha enviado' ? 'Enviar mensaje' : 'Tu mensaje se ha enviado';
   }
   addSingle() {
-    this.messageService.add({severity:'success', summary:'Mensaje enviado',
-     detail:'Su mensaje a sido recibido exitosamente.'});
-}
+    this.messageService.add({
+      severity: 'success', summary: 'Mensaje enviado',
+      detail: 'Su mensaje a sido recibido exitosamente.'
+    });
+  }
 }

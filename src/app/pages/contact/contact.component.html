@@ -22,9 +22,9 @@
             </div>
             <div class="flex flex-column gap-2">
                 <label style="font-weight: 700; ">Mensaje</label>
-                <textarea minlength="4" pInputText placeholder="Escriba el mensaje..." formControlName="body"
+                <textarea minlength="4" pInputText placeholder="Escriba el mensaje..." formControlName="message"
                     style="box-shadow: none;background-color: #303245;color: #ffffff;border-width: 2px;"></textarea>
-                    <small *ngIf="!invalidForm&& this.emailForm.get('body')?.invalid" id="username2-help" 
+                    <small *ngIf="!invalidForm&& this.emailForm.get('message')?.invalid" id="username2-help" 
                     class="p-invalid">El mensaje es obligatorio.</small>
             </div>
             <div class="flex justify-content-start" style="margin-top: 2rem;">
