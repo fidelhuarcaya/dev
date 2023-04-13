@@ -1,0 +1,44 @@
+<div [ngClass]="isMobile?'mobile-container':'desk-container'" class="flex flex-column justify-content-between gap-8">
+  <div class="dev">
+    <h5>Hi, my name is</h5>
+    <h1 style="color: #E3E7D1;" [ngClass]="isMobile?'mobile':'desk'">Fidel Huarcaya</h1>
+    <h2 style="color: #d0ff00; font-weight: bold;">
+      {{ textoMostrado }}
+      <span *ngIf="mostrarCursor" style="color: #E3E7D1;">|</span>
+    </h2>
+
+    <div class="description flex flex-column">
+      <div style="color: rgb(31, 117, 255);" class="flex flex-row">
+
+        <span style="color: rgb(253, 253, 253);font-size: 20px; font-weight: 200;width: 80%;;justify-content: center;">
+          <span style="color: #01a6ff; 
+            font-size: 24px; margin-right: 2px; font-weight: 800;">
+            <
+            </span>
+              Web and mobile developer constantly improving skills and
+              knowledge to create innovative solutions.
+              <span style="color: #01a6ff;
+          font-size: 24px; margin-left: 2px;font-weight: 800; ">/></span>
+          </span>
+
+      </div>
+
+    </div>
+    <div class="flex flex-row gap-3">
+      <!--<button pButton 
+      style="box-shadow: none; background-color: #02a95b;" (click)="show()" label="Contáctame" icon="pi pi-send" iconPos="right">
+      </button>-->
+      <a href="https://play.google.com/store/apps/dev?id=7395331256085212921" target="_blank" rel="noopener noreferrer">
+        <button pButton style="box-shadow: none; color: #01a6ff;" label="Give one to my app" class="p-button-outlined">
+
+        </button>
+      </a>
+    </div>
+  </div>
+  <div id="myDiv" class="flex align-content-center align-items-center justify-content-center scroll">
+    <a href="#about">
+      <button pButton style="box-shadow: none; " class="p-button-text scrolling">
+        <i class="pi pi-angle-double-down" style="font-size: 4rem; font-weight: 100;"></i>
+      </button></a>
+  </div>
+</div>

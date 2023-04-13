@@ -1,0 +1,113 @@
+.navbar-brand {
+    color: #428bc2;
+}
+
+nav {
+    background-color: #0B181E;
+}
+
+.navbar-brand:hover {
+    color: #fcfcfc;
+}
+
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+    color: #ff6601;
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars {
+    color: #7f4722;
+}
+
+.navbar-scrolled {
+    background-color: #ffede7;
+}
+
+.nav-item>a {
+    font-size: 1.3rem;
+}
+
+.nav-item>a:hover {
+    color: #01a6ff;
+}
+
+.nav-item::before {
+    color: #01a6ff
+}
+
+
+.navbar-hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-show {
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #01a6ff;
+    font-weight: 900;
+
+}
+
+::ng-deep .p-togglebutton.p-button {
+    box-shadow: none;
+    background-color: transparent;
+    background: transparent;
+    border-color: #01a6ff;
+    color: #01a6ff;
+}
+
+::ng-deep .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover {
+    box-shadow: none;
+    background-color: transparent;
+    color: #01a6ff;
+}
+
+::ng-deep .p-togglebutton.p-button.p-highlight:hover {
+    background: transparent;
+    border-color: #01a6ff;
+    color: #01a6ff;
+}
+
+::ng-deep .p-ripple .p-element .p-button .p-togglebutton .p-component .p-button-icon-only {
+    background: transparent;
+    border-color: #01a6ff;
+    color: #01a6ff;
+}
+
+::ng-deep .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover .p-button-icon-left,
+.p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover .p-button-icon-right {
+    color: #1b8bfc;
+
+}
+
+::ng-deep .p-togglebutton.p-button .p-button-icon-left,
+.p-togglebutton.p-button .p-button-icon-right {
+    color: #1b8bfc;
+}
+
+::ng-deep .p-togglebutton.p-button.p-highlight:hover .p-button-icon-left,
+.p-togglebutton.p-button.p-highlight:hover .p-button-icon-right {
+    color: #1b8bfc;
+}
+
+::ng-deep .p-togglebutton.p-button:not(.p-disabled):not(.p-highlight):hover {
+    border-color: #1b8bfc;
+}
+
+::ng-deep .p-togglebutton.p-button.p-highlight {
+    background: transparent;
+
+}
+
+::ng-deep .p-togglebutton.p-button.p-highlight .p-button-icon-left, .p-togglebutton.p-button.p-highlight .p-button-icon-right {
+    color: #1b8bfc;
+}
+
+.navbar-nav.show {
+    transition: step-start 2.3s ease-out;
+  }

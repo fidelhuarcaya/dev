@@ -1,0 +1,15 @@
+.footer {
+    height: auto;
+    padding-bottom: 10px;
+
+    width: 100%;
+    padding-top: 3rem;
+
+    border-top: 1px solid #696363;
+
+}
+
+.pull-left{
+    padding-top: 5%;
+    color: aliceblue;
+}

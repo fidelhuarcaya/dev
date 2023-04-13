@@ -1,0 +1,49 @@
+<nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-show">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../../../assets/img/logo.png" alt="" width="50" height="44" class="d-inline-block align-text-top">
+    </a>
+    <p-toggleButton class="navbar-toggler ps-0 p-button-outlined" type="button" data-mdb-toggle="collapse"
+      data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+      (click)="toggleNav()"
+      aria-label="Toggle navigation" onIcon="pi pi-times" offIcon="pi pi-bars">
+    </p-toggleButton>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav" [ngClass]="{'show': isNavOpen}">
+      <ul class="navbar-nav" [@slideDown]="isNavOpen">
+        <li class="nav-item" [ngClass]="{ 'active': activeItem === 0 }">
+          <a class="nav-link px-3" href="#about" (click)="setActiveItem(0)">About</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': activeItem === 1 }">
+          <a class="nav-link px-3" href="#experience" (click)="setActiveItem(1)">Experience</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': activeItem === 3 }">
+          <a class="nav-link px-3" href="#work" (click)="setActiveItem(3)" style="">Work</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': activeItem === 4 }">
+          <a class="nav-link px-3" href="#contact" (click)="setActiveItem(4)">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="content">
+  <div class="scroll-container">
+    <div id="home"></div>
+    <app-home class="full-height"></app-home>
+
+    <div id="about"></div>
+    <app-about class="full-height"></app-about>
+
+    <div id="experience"></div>
+    <app-experience class="full-height"></app-experience>
+
+    <div id="work"></div>
+    <app-work class="full-height"></app-work>
+
+    <div id="contact"></div>
+    <app-contact class="full-height"></app-contact>
+  </div>
+</div>

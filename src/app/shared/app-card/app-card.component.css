@@ -1,0 +1,58 @@
+
+.card>a {
+    margin-top: 22px;
+
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.btn-apps{
+
+}
+.card {
+    background-color: #2a2b38;
+    align-items: center;
+    align-content: center;
+    margin-top: 3%;
+    line-height: 1rem;
+    border: none;
+}
+
+.btn-card {
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.btn-card>a {
+    margin-bottom: 1.2rem;
+}
+.card-title{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.card-text {
+    height: 4rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 6rem;
+
+}
+@media (max-width: 767px) {
+    .flex-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .card {
+      width: 45%;
+      margin: 1%;
+    }
+  }
+  
