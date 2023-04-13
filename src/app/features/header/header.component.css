@@ -1,9 +1,10 @@
 .navbar-brand {
     color: #428bc2;
+    padding-left: 8%;
 }
 
 nav {
-    background-color: #0B181E;
+    background-color: #0d1e0b;
 }
 
 .navbar-brand:hover {

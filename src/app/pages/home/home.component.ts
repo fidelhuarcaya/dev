@@ -11,6 +11,7 @@ import Utils from 'src/app/shared/utils/commons.utils';
 })
 export class HomeComponent implements OnInit {
   texto = ['Backend developer', 'Mobile developer', 'Software developer'];
+  colorPalette = ['#E3E7D1','#01a6ff','#63BE94'];
   textoMostrado = '';
   mostrarCursor = true;
 
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
 
   isClicked = false;
   intervalId: any;
+  colorActual='#E3E7D1'
   constructor(public dialogService: DialogService,
     private deviceService: DeviceDetectorService,
     private el: ElementRef) { }
@@ -29,6 +31,7 @@ export class HomeComponent implements OnInit {
 
   mostrarTexto() {
     const textoActual = this.texto.shift(); // Obtener y eliminar el primer elemento del arreglo
+
 
     if (!textoActual) {
       return
@@ -43,8 +46,10 @@ export class HomeComponent implements OnInit {
           this.textoMostrado = ''; // Reiniciar el texto mostrado
           this.mostrarCursor = true; // Activar el cursor para el próximo texto
           this.mostrarTexto(); // Mostrar el próximo texto
+          this.colorActual=this.colorPalette[Math.floor(Math.random() * this.colorPalette.length)];
         }, 2000); // Esperar 2 segundos antes de mostrar el próximo texto
       }
+      
     }, 200); // Mostrar una letra cada 200 milisegundos
   }
 
