@@ -119,4 +119,12 @@ p {
     font-size: 2rem;
 }
 
-.desk {}
+.div-hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.div-show {
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in-out;
+}

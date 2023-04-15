@@ -1,3 +1,4 @@
+import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { DialogService } from 'primeng/dynamicdialog';
@@ -7,7 +8,18 @@ import Utils from 'src/app/shared/utils/commons.utils';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    trigger('slideDown', [
+      transition(':enter', [
+        style({ transform: 'translateY(-100%)' }),
+        animate('1.5s ease', style({ transform: 'translateY(0%)' }))
+      ]),
+      transition(':leave', [
+        animate('1.5s ease', style({ transform: 'translateY(-100%)' }))
+      ])
+    ])
+  ]
 })
 export class HomeComponent implements OnInit {
   texto = ['Backend developer', 'Mobile developer', 'Software developer'];
@@ -20,13 +32,16 @@ export class HomeComponent implements OnInit {
   isClicked = false;
   intervalId: any;
   colorActual='#E3E7D1'
+  isNavOpen=false;
   constructor(public dialogService: DialogService,
     private deviceService: DeviceDetectorService,
     private el: ElementRef) { }
 
   ngOnInit(): void {
+    this.init();
     this.isMobile = this.deviceService.isMobile();
     this.mostrarTexto();
+    
   }
 
   mostrarTexto() {
@@ -70,5 +85,22 @@ export class HomeComponent implements OnInit {
 
   scrollDown() {
     this.el.nativeElement.querySelector('#myDiv').scrollTop += 200;
+  }  
+  init() {
+    
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      const navbarExample2 = document.querySelector('#navbar-example2') as HTMLElement;
+      if (prevScrollpos > currentScrollPos) {
+        navbarExample2.classList.add('navbar-show');
+        navbarExample2.classList.remove('navbar-hide');
+      } else {
+        navbarExample2.classList.add('navbar-hide');
+        navbarExample2.classList.remove('navbar-show');
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    
   }
 }

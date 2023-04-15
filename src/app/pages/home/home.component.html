@@ -1,5 +1,7 @@
-<div [ngClass]="isMobile?'mobile-container':'desk-container'" class="flex flex-column justify-content-between gap-8">
-  <div class="dev">
+<div [ngClass]="isMobile?'mobile-container':'desk-container'" 
+
+class="flex flex-column justify-content-between gap-8">
+  <div class="dev"  [@slideDown]="isNavOpen">
     <h5>Hi, my name is</h5>
     <h1 style="color: #E3E7D1;" [ngClass]="isMobile?'mobile':'desk'">Fidel Huarcaya</h1>
     <h2 style="color: {{colorActual}}; font-weight: bold;">
