@@ -1,7 +1,7 @@
 <div [ngClass]="isMobile?'mobile-container-body':'desk-container-body'" >
     <h1>Experiencia</h1>
     <div >
-        <p-timeline [value]="events" align="{{isMobile?'left':'alternate'}}">
+        <p-timeline [value]="events" align="left">
             <ng-template pTemplate="marker" let-event>
                 <span class="custom-marker shadow-2" >
                     <h3>{{event.header}}</h3>

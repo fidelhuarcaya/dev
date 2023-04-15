@@ -1,4 +1,12 @@
-<app-side-nav></app-side-nav>
-<app-header></app-header>
+<div *ngIf="!showSpinner"class="fixed blocker">
+    <div class="spinner-wrapper flex flex-column align-items-center">
+        <div class="mover"></div>
+    </div>
+</div>
 
-<app-footer></app-footer>
+<div *ngIf="showSpinner">
+    <app-side-nav></app-side-nav>
+    <app-header></app-header>
+
+    <app-footer></app-footer>
+</div>

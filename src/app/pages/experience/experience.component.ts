@@ -23,13 +23,13 @@ export class ExperienceComponent implements OnInit {
         color: '#673AB7',
         header: '2023',
         descriptions: [
-          'Desarrollo de microservicios con Spring Boot, JPA y Postgres.',
-          'Pruebas de estrés con Jmeter a los endpoint.',
-          'Test con JUnit de los microservicios',
-          'Documentación de los microservicios con OpenApi',
-          'QA de código con Sonarqube y SonarLint.',
-          'Generación de Wizard con Angular, consumo de apis, FormReactive',
-          'Metodología SCRUM'
+          'Development of microservices with Spring Boot, JPA and Postgres.',
+          'Stress tests with Jmeter to the endpoints.',
+          'Microservices test with JUnit',
+          'Documentation of microservices with OpenApi',
+          'Code QA with Sonarqube and SonarLint.',
+          'Wizard generation with Angular, API consumption, FormReactive',
+          'SCRUM Methodology'
         ]
       },
       {
@@ -37,9 +37,9 @@ export class ExperienceComponent implements OnInit {
         subtitle: 'Alpha Neo', icon: 'pi pi-shopping-cart', color: '#9C27B0', image: 'game-controller.jpg',
         header: '2022',
         descriptions: [
-          'Integración de compras en la aplicación.',
-          'Desarrollo de aplicaciones Android y actualizaciones de la misma.',
-          'Correción de bugs.'
+          'In-app purchase integration.',
+          'Development of Android applications and updates thereof.',
+          'Bug fixes.'
         ]
       },
       

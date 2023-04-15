@@ -42,6 +42,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     WebComponent,
     SideNavComponent,
     EmailDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -62,6 +63,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     DialogService,
     MessageService,
     DeviceDetectorService,
+
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

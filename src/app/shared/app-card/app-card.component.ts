@@ -22,8 +22,8 @@ export class AppCardComponent implements OnInit {
         languages:['Java', 'SQLite', 'XML'],
         url:'https://play.google.com/store/apps/details?id=com.alphaneo.calculadora',
         image:'https://play-lh.googleusercontent.com/5pV-4mrUqYDSJlBTSLykCXf8sbnnrSpbDxQuRDyMOoHQe5KLhVHf4_GSRzcyTcR-sg=w240-h480-rw',
-        name:'Calculadora Neo',
-        description:'Calculadora simple para android con temas, personalizable. Con funciones científicas.'
+        name:'Neo Calculator',
+        description:'Simple calculator for android with themes, customizable. With scientific functions.'
 
       },
       {
@@ -32,7 +32,7 @@ export class AppCardComponent implements OnInit {
         image:'https://play-lh.googleusercontent.com/SZvGNHXLhv8AcYGaTYmL4nRAKchHgbkYzB2qX8X4TnZniIMGOKlWo9QzJCtQp3QpQLE=s256-rw',
         name:'Izimath',
         description:
-        "App de fórmulas, juegos y trucos matemáticos para estudiantes y cualquier otro apasionado por la matemática."
+        "App of formulas, games and mathematical tricks for students and any other passionate about mathematics."
 
       },
       {
@@ -40,7 +40,7 @@ export class AppCardComponent implements OnInit {
         url:'https://play.google.com/store/apps/details?id=com.alphaneo.izimath.pro',
         image:'https://play-lh.googleusercontent.com/1H5Zs5-tbZ-sDsm6nxPDcCso9O0X0a7rofoD6vRIVV1IOzhGsNbEBkASNJNdeHdYU4Y=w240-h480-rw',
         name:'Izimath PRO',
-        description:'La versión PREMIUM de la aplicación Izimath con más funcionalidades, como ver a pantalla completa los temas.'
+        description:'The PREMIUM version of the Izimath application with more features, such as viewing the themes in full screen.'
 
       },
       {
@@ -48,7 +48,7 @@ export class AppCardComponent implements OnInit {
         url:'https://github.com/fidelhuarcaya/angular11-rest-api',
         image:'https://cdn-icons-png.flaticon.com/512/5609/5609117.png',
         name:'Classroom App',
-        description:'Una aplicación web para registrar, listar, modificar y eliminar alumnos.'
+        description:'A web application to register, list, modify and delete students.'
 
       },
     ]
