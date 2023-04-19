@@ -1,112 +1,134 @@
-.card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    height: 350px;
-    width: 190px;
-    min-width: 250px;
-    padding: 1rem;
-    border-radius: 16px;
-    background: #17141d;
-    box-shadow: -1rem 0 3rem #00000067;
-    transition: .2s;
-    font-family: 'Inter', sans-serif;
-  }
+.card-desk {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 450px;
+  min-height: 350px;
+  width: 40%;
+  min-width: 150px;
+  max-width: 500px;
+  padding: 1rem;
+  border-radius: 16px;
+  background: #2a2b38;
+  transition: 0.2s;
   
-  .card:hover {
-    transform: translateY(-0.4rem);
-  }
   
-  .card-author {
-    position: relative;
-    display: grid;
-    grid-template-columns: 75px 1fr;
-    align-items: center;
-    margin: 3rem 0 0;
-  }
+}
+.card-mobile {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 16px;
+  background: #2a2b38;
+  transition: 0.2s;
   
-  .author-name {
-    color: #7a7a8c;
-  }
-  
-  .author-name-prefix {
-    color: #2e65e5;
-    font-weight: 600;
-  }
-  
-  .author-avatar span {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #f2f2f2;
-    margin: 16px 10px;
-  }
-  
-  .half-circle {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 48px;
-    fill: none;
-    stroke: #3e5beb;
-    stroke-width: 8;
-    stroke-linecap: round;
-  }
-  
-  .card-header {
-    margin-bottom: auto;
-    color: #7a7a8c;
-  }
-  
-  .card-header p {
-    font-size: 14px;
-    margin: 0 0 1rem;
-    color: #7a7a8c;
-  }
-  
-  .card-header .title {
-    font-size: 25px;
-    margin: .25rem 0 auto;
-    cursor: pointer;
-    font-family: 'Arial Black', sans-serif;
-  }
-  
-  .card-header .title:hover {
-    background: linear-gradient(90deg,#3455e8,#4855ed);
-    text-shadow: none;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .tags {
-    margin: 1rem 0 2rem;
-    padding: .5rem 0 1rem;
-    line-height: 2;
-    margin-bottom: 0;
-  }
-  
-  .tags a {
-    font-style: normal;
-    font-weight: 700;
-    color: #7a7a8c;
-    text-transform: uppercase;
-    font-size: .66rem;
-    border: 3px solid #28242f;
-    border-radius: 2rem;
-    padding: .2rem .85rem .25rem;
-    position: relative;
-  }
-  
-  .tags a:hover {
-    background: linear-gradient(90deg,#ff8a00,#e52e71);
-    text-shadow: none;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    background-clip: text;
-    border-color: white;
-  }
+}
+
+.content-mobile{
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+.card-desk:hover {
+  transform: translateY(-0.4rem);
+}
+
+.card-author {
+  position: relative;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  margin: 3rem 0 0;
+}
+
+.author-name {
+  color: #7a7a8c;
+}
+.author-name:hover {
+  color: #599bff;
+}
+.author-name-prefix {
+  color: #2e65e5;
+  font-weight: 600;
+}
+
+.author-avatar span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  margin: 16px 10px;
+}
+
+.half-circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 48px;
+  fill: none;
+  stroke: #3e5beb;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.card-header {
+  margin-bottom: auto;
+  color: #7a7a8c;
+}
+
+.card-header p {
+  font-size: 14px;
+
+  color: #7a7a8c;
+}
+
+.card-header .title {
+  font-size: 25px;
+
+  cursor: pointer;
+  gap: 6;
+  font-weight: bold;
+  display: flex;
+}
+
+.card-header .title:hover {
+  background: linear-gradient(90deg, #607dff, #466eff);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tags {
+  margin: 1rem 0 2rem;
+  padding: 0.5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.tags a {
+  font-style: normal;
+  font-weight: 700;
+  color: #7a7a8c;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+}
+
+.tags a:hover {
+  background: linear-gradient(90deg, #4fb0fa, #3d68f7);
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-clip: text;
+}

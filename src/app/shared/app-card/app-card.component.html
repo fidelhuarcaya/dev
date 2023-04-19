@@ -1,10 +1,9 @@
 <div style="width: 100%;">
   <div *ngFor="let application of applications" class="item " style="width: 100%;">
     <div class="card" style="width: 100%;">
-      <div class="flex flex-row  align-content-center align-items-center justify-content-center">
-        <div >
-          <div class="flex align-content-center align-items-center justify-content-center" 
-          >
+      <div class="flex flex-row  align-content-center align-items-center justify-content-center gap-5">
+        <div>
+          <div class="flex align-content-center align-items-center justify-content-center gap-5">
             <a href="{{application.url}}" target="_blank">
               <img width="140px" src="{{application.image}}" alt="">
             </a>
@@ -47,4 +46,3 @@
 
   </div>
 </div>
-

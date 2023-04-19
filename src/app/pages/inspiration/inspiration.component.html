@@ -1,23 +1,30 @@
-<div style="display: flex; align-items: center; align-content: center; justify-content: center; justify-items: center;">
-    <div class="card ">
+<div style="width: 100%; " ngClass="{{isMobile?'content-mobile':''}}">
+    <div ngClass="{{!isMobile?'card-desk':'card-mobile'}}">
         <header class="card-header">
             <p>May 3rd 2023</p>
-            <a style="color: antiquewhite;" href="https://github.com/fidelhuarcaya/MathView"><span  class="title">Mathview</span></a>
+            <a style="color: antiquewhite;" href="https://github.com/fidelhuarcaya/MathView"><span
+                    class="title">MathView</span></a>
+            <img alt="JitPack"
+                src="https://img.shields.io/jitpack/version/com.github.fidelhuarcaya/MathView?color=gree&label=JitPack&logoColor=green">
+
         </header>
         <div>
             <p>Android library to display mathematical formulas and expressions.
-                 App in production using the library to show mathematical formulas, 
-                 <a href="https://github.com/fidelhuarcaya/MathView" style="color: rgb(89, 89, 223);">Inspire me.</a></p>
+                App in production using the library to show mathematical formulas,
+                <a href="https://github.com/fidelhuarcaya/MathView" style="color: rgb(80, 176, 255);">Inspire me.</a>
+            </p>
         </div>
         <div class="card-author">
             <a class="author-avatar" href="#">
                 <span>
-                </span></a>
+                </span>
+            </a>
             <svg class="half-circle" viewBox="0 0 106 57">
                 <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
             </svg>
             <div class="author-name">
-                <div class="author-name-prefix">Author</div> Fidel Huarcaya
+                <div class="author-name-prefix">Author</div> 
+                <a class="author-name" href="https://github.com/fidelhuarcaya" target="_blank" rel="noopener noreferrer"> Fidel Huarcaya</a>
             </div>
         </div>
         <div class="tags">

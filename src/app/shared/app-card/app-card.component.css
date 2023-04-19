@@ -10,14 +10,12 @@ h5 {
     color: aliceblue;
 }
 
-.btn-apps{
-
-}
 .card {
     background-color: #2a2b38;
     margin-top: 3%;
     line-height: 1rem;
     border: none;
+    margin-bottom: 2rem;
 }
 
 .btn-card {
@@ -36,22 +34,9 @@ h5 {
 }
 .card-text {
     height: 4rem;
-
     font-size: 1rem;
     line-height: 1.5rem;
-    padding-bottom: 6rem;
 
 }
-@media (max-width: 767px) {
-    .flex-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .card {
-      width: 45%;
-      margin: 1%;
-    }
-  }
+
   
