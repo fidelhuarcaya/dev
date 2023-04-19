@@ -23,7 +23,7 @@ h1 {
     align-content: center;
     align-self: center;
     color: white;
-    background-color: #262626;
+    background-color:#2a2b38;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
