@@ -15,8 +15,6 @@ h5 {
 }
 .card {
     background-color: #2a2b38;
-    align-items: center;
-    align-content: center;
     margin-top: 3%;
     line-height: 1rem;
     border: none;
@@ -38,6 +36,7 @@ h5 {
 }
 .card-text {
     height: 4rem;
+
     font-size: 1rem;
     line-height: 1.5rem;
     padding-bottom: 6rem;

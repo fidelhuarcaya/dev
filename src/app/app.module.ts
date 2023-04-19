@@ -27,6 +27,10 @@ import {ToastModule} from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import {ToggleButtonModule} from 'primeng/togglebutton';
+import { NotFoundComponent } from './core/error/not-found/not-found.component';
+import { AppLayoutComponent } from './core/components/layout/app-layout/app-layout.component';
+import { SendEmailModule } from './pages/send-email/send-email.module';
+import { InspirationComponent } from './pages/inspiration/inspiration.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,9 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     WebComponent,
     SideNavComponent,
     EmailDialogComponent,
+    NotFoundComponent,
+    AppLayoutComponent,
+    InspirationComponent,
 
   ],
   imports: [
@@ -58,6 +65,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     DynamicDialogModule,
     ToastModule,
     ToggleButtonModule,
+    SendEmailModule
   ],
   providers: [    
     DialogService,

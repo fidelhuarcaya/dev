@@ -1847,8 +1847,8 @@ p-radiobutton.ng-dirty.ng-invalid>.p-radiobutton>.p-radiobutton-box {
   background: #ffffff;
   border: 1px solid #ced4da;
   color: #495057;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-    box-shadow 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    box-shadow: none;
 }
 
 .p-selectbutton .p-button .p-button-icon-left,
@@ -1966,6 +1966,7 @@ p-selectbutton.ng-dirty.ng-invalid>.p-selectbutton>.p-button {
   color: #495057;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s,
     box-shadow 0.2s;
+    box-shadow: none;
 }
 
 .p-togglebutton.p-button .p-button-icon-left,

@@ -1,18 +1,22 @@
-<div class="web-projects">
-    <div *ngFor="let project of projects">
-        <mat-card class="container">
-            <div class="item item1">
-                <a class="container-image" href={{project.url}} target="_blank">
+<div>
+    <div *ngFor="let project of projects"
+        class="flex align-content-center align-items-center justify-content-center">
+        <div class="container align-content-center align-items-center justify-content-center">
+            <div class="flex">
+                <a href={{project.url}} target="_blank" *ngIf="!isMobile">
                     <img class="image" src={{project.image}} alt="">
                 </a>
+                <div style="padding: 2rem;">
+                    <h2 style="color: aliceblue;">{{project.title}}</h2>
+                    <p>
+                        {{project.description}}
+                    </p>
+                </div>
             </div>
-            <div class="item item2">
-                <h2>{{project.title}}</h2>
-                <p>
-                    {{project.description}}
-                </p>
-                <div class="text-center text-muted stack">
-                    <div class="row align-items-start">
+            <div class="flex flex-column">
+
+                <div class="text-center ">
+                    <div class="row">
                         <div class="col">
                             Angular
                         </div>
@@ -27,12 +31,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="actions">
-                    <a  color="basic" href={{project.repository}} target="_blank">Code/Repository</a>
-                    <a  color="primary" href={{project.url}} target="_blank">Demo/Preview</a>
+                <div class="flex align-content-center align-items-center justify-content-center gap-5 " 
+                style="padding-bottom: 2rem;margin-top: 3rem;">
+                    <a color="basic" href={{project.repository}} target="_blank">
+                        <button style="box-shadow: none;" class="p-button-outlined" pButton>
+                            Code/Repository</button></a>
+                    <a color="primary" href={{project.url}} target="_blank">
+                        <button style="box-shadow: none; " type="button" class="p-button-info"
+                            pButton>Demo/Preview</button></a>
                 </div>
             </div>
 
-        </mat-card>
+        </div>
     </div>
 </div>
