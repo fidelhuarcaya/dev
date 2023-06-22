@@ -1,0 +1,27 @@
+<div [ngClass]="isMobile?'mobile-container':'desk-container'">
+    <section id="about">
+        <div class="flex flex-column gap-8">
+            <div class="row ">
+                <div class="col-lg-8">
+                    <h1>About me</h1>
+                    <p>I'm Fidel Huarcaya, a software developer from Peru. I'm a guy who
+                        he likes solving problems through software development.
+                        Create a smart solution and imagine a useful interaction, developing web experiences
+                        rich,
+                        web and mobile applications.
+                    </p>
+
+
+                </div>
+            </div>
+            <div>
+                <button pButton style="color: #01a6ff;box-shadow: none;" (click)="showCV()" 
+                label="Resume"
+                class="p-button-outlined"
+                    icon="pi pi-download">
+                </button>
+            </div>
+
+        </div>
+    </section>
+</div>

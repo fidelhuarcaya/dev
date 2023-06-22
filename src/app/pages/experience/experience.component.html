@@ -1,0 +1,32 @@
+<div [ngClass]="isMobile?'mobile-container-body':'desk-container-body'" >
+    <h1>Where I’ve Worked</h1>
+    <div >
+        <p-timeline [value]="events" align="left">
+            <ng-template pTemplate="marker" let-event>
+                <span class="custom-marker shadow-2" >
+                    <h3>{{event.header}}</h3>
+                </span>
+            </ng-template>
+            <ng-template pTemplate="content" let-event>
+                <p-card [header]="event.status" [subheader]="event.subtitle" styleClass="card-red">
+
+                        <div style="text-align: left;">
+                            <ul *ngFor="let description of event.descriptions">
+                                <li>
+                                    <p>{{description}}</p>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                
+                    <!--<button pButton label="Read more" class="p-button-text" style="color: brown;"></button>-->
+                </p-card>
+    
+            </ng-template>
+        </p-timeline>
+
+
+
+    </div>
+   
+</div>

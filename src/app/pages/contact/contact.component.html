@@ -1,0 +1,66 @@
+<p-toast></p-toast>
+<div [ngClass]="isMobile?'mobile-container-body':'desk-container-body'">
+    <h1>Get in touch</h1>
+    <p style="line-height: 2rem; font-size: large;">For new projects, I check my inbox continuously.
+        Whether you want to talk about an important topic or just want to say hi, I'll do my best to get back to you!
+    </p>
+    <div class="form flex justify-content-center">
+        <div [ngClass]="isMobile?'card-form-mobile':'card-form-desk'">
+            <form class="example-form" [formGroup]="emailForm" (submit)="sendEmail()">
+                <div class="flex flex-column gap-3">
+                    <div class="flex flex-column gap-2 field">
+                        <label style="font-weight: 700; ">Name</label>
+                        <input style=" color: #ffffff;" minlength="4" pInputText placeholder="Ex: Fidel Huarcaya"
+                            [ngClass]="{'p-invalid': !emailForm.controls['name'].valid, 'p-valid': emailForm.controls['name'].valid}"
+                            formControlName="name">
+                        <small *ngIf="!invalidForm&& this.emailForm.get('name')?.invalid" class="p-invalid">The name is
+                            required.</small>
+                    </div>
+                    <div class="flex flex-column gap-2 field">
+                        <label style="font-weight: 700; ">Email</label>
+                        <input minlength="6" style=" color: #ffffff; " pInputText placeholder="contact@example.com"
+                            formControlName="email"
+                            [ngClass]="{'p-invalid': !emailForm.controls['email'].valid, 'p-valid': emailForm.controls['email'].valid}">
+                        <small *ngIf="!invalidForm&& this.emailForm.get('email')?.invalid" class="p-invalid">Email is
+                            required..</small>
+                    </div>
+                    <div class="flex flex-column gap-2 field">
+                        <label style="font-weight: 700; ">Message</label>
+                        <textarea minlength="4" pInputText placeholder="Write the message..." formControlName="message"
+                            style=" color: #ffffff; "
+                            [ngClass]="{'p-invalid': !emailForm.controls['message'].valid, 'p-valid': emailForm.controls['message'].valid}"></textarea>
+                        <small *ngIf="!invalidForm&& this.emailForm.get('message')?.invalid" class="p-invalid">The
+                            message is required.</small>
+                    </div>
+                    <div class="" style="margin-top: 1rem; margin-bottom: 2rem;">
+
+                        <button type="button" class="button" (click)="onClick()">
+                            <span class="button__text">Send Message</span>
+                            <span class="button__icon">
+                            <svg *ngIf="!showSend" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                enable-background="new 0 0 512 512" xml:space="preserve" style="position: absolute; top: 3px; 
+                                fill: #ffffff; width: 2.5rem;">
+                                <path
+                                    d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z M202.992,332.528v124.517l58.738-67.927L202.992,332.528z">
+                                </path>
+                            </svg>
+
+                 
+                            </span>           <svg *ngIf="showSend" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                                style="fill: #ffffff; width: 5rem;position: fixed;" enable-background="new 0 0 512 512"
+                                xml:space="preserve">
+                                <path id="paper-plane-icon"
+                                    d="M462,54.955L355.371,437.187l-135.92-128.842L353.388,167l-179.53,124.074L50,260.973L462,54.955z M202.992,332.528v124.517l58.738-67.927L202.992,332.528z">
+                                </path>
+                            </svg>
+                          </button>
+
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+
+.card>a {
+    margin-top: 22px;
+
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.card {
+    background-color: #2a2b38;
+    margin-top: 3%;
+    line-height: 1rem;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.btn-card {
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.btn-card>a {
+    margin-bottom: 1.2rem;
+}
+.card-title{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.card-text {
+    height: 4rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+}
+
+  

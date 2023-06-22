@@ -1,0 +1,48 @@
+<div style="width: 100%;">
+    <div *ngFor="let application of applications" class="item " style="width: 100%;">
+      <div class="card" style="width: 100%;">
+        <div class="flex flex-row  align-content-center align-items-center justify-content-center gap-5">
+          <div>
+            <div class="flex align-content-center align-items-center justify-content-center gap-5">
+              <a href="{{application.url}}" target="_blank">
+                <img width="140px" src="{{application.image}}" alt="">
+              </a>
+            </div>
+            <div class="card-body">
+              <a target="_blank" href="{{application.url}}">
+                <h5 class="card-title">{{application.name}}</h5>
+              </a>
+              <p class="card-text">{{application.description}}</p>
+            </div>
+            <div class="text-center text-muted">
+              <div class="row align-items-start">
+                <div class="col" *ngFor="let language of application.languages">
+                  {{language}}
+                </div>
+  
+              </div>
+            </div>
+            <div class="btn-card">
+              <a href="{{application.url}}" target="_blank">
+                <button pButton class="btn-apps p-button-outlined" style="box-shadow: none;">
+                  See application
+                </button>
+              </a>
+            </div>
+          </div>
+  
+  
+          <div *ngIf="!isMobile">
+            <a href="{{application.url}}" target="_blank">
+              <img width="200px" src="{{application.asset}}" alt="">
+            </a>
+          </div>
+  
+        </div>
+  
+  
+      </div>
+  
+  
+    </div>
+  </div>

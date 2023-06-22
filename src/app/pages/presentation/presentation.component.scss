@@ -1,0 +1,130 @@
+._button {
+    font-family: inherit;
+    font-size: 20px;
+    background: #01a6ff;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+
+}
+
+.description {
+    max-width: 50rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+._button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+._button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+._button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+._button:hover span {
+    transform: translateX(2.5em) rotate(0deg) scale(1.1);
+}
+
+button:hover .contact {
+    transform: translateX(8em);
+}
+
+._button:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+.container {
+    padding-bottom: 12rem;
+
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+h5 {
+    font-weight: 700;
+    color: #33beee;
+}
+
+p {
+    padding-bottom: 2.5rem;
+    font-size: 25px;
+    line-height: 2.5rem;
+}
+
+
+.contact {
+
+    color: aliceblue;
+}
+
+::ng-deep .p-dialog .p-dialog-header {
+    background-color: #15172b;
+    color: white;
+}
+
+::ng-deep .p-dialog .p-dialog-content {
+    background-color: #15172b;
+    color: white;
+}
+
+.scroll {
+    margin-top: 3rem;
+}
+
+.scrolling {
+    animation: blinker 5s linear infinite;
+    color: #01a6ff;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.scrolling:hover {
+    color: #01a6ff;
+    opacity: 100%;
+}
+
+.mobile {
+    font-size: 2rem;
+}
+
+.div-hide {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.div-show {
+    transform: translateY(0%);
+    transition: transform 0.3s ease-in-out;
+}
