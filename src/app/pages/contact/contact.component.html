@@ -22,7 +22,7 @@
                             formControlName="email"
                             [ngClass]="{'p-invalid': !emailForm.controls['email'].valid, 'p-valid': emailForm.controls['email'].valid}">
                         <small *ngIf="!invalidForm&& this.emailForm.get('email')?.invalid" class="p-invalid">Email is
-                            required..</small>
+                            required.</small>
                     </div>
                     <div class="flex flex-column gap-2 field">
                         <label style="font-weight: 700; ">Message</label>

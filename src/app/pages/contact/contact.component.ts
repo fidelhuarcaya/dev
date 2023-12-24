@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DeviceDetectorService } from 'ngx-device-detector';
@@ -11,7 +11,7 @@ import { EmailService } from 'src/app/core/service/email.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
   email!: Email;
   emailForm = new FormGroup({
     name: new FormControl('', [Validators.minLength(4), Validators.required]),
@@ -23,11 +23,15 @@ export class ContactComponent implements OnInit {
   invalidForm = true;
 
   isMobile = false;
+  intervalId:any;
   constructor(private service: EmailService,
     private elementRef: ElementRef,
     private messageService: MessageService,
     private deviceService: DeviceDetectorService,
     private router: Router) { }
+  ngOnDestroy(): void {
+    this.stopNavigation()
+  }
 
   ngOnInit(): void {
     this.isMobile = this.deviceService.isMobile();
@@ -50,13 +54,13 @@ export class ContactComponent implements OnInit {
   }
  onClick() {
 
-    /*if (this.emailForm.invalid) {
+    if (this.emailForm.invalid) {
       this.emailForm.get('name')?.markAsDirty();
       this.emailForm.get('email')?.markAsDirty();
       this.emailForm.get('body')?.markAsDirty();
       this.invalidForm = false;
       return;
-    }*/
+    }
 
     if (this.showSend)
       this.showSend = false;
@@ -69,17 +73,22 @@ export class ContactComponent implements OnInit {
     this.sendEmail();
     //this.addSingle();
 
-    setInterval(() => {
-      this.router.navigate(['send']);
-      return;
-    }, 2000)
-
-
-
+    this.startNavigation()
 
   }
-  /*addSingle() {
-    this.messageService.add({ severity: 'success', summary: 'Mensaje enviado', detail: 'Su mensaje a sido recibido exitosamente.' });
-  }*/
+  startNavigation() {
+    this.intervalId = setInterval(() => {
+      this.router.navigate(['send']);
+    }, 2000);
+  }
+
+  stopNavigation() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
+  }
+
+  
 }
 

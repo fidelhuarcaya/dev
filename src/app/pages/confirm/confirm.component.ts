@@ -20,7 +20,6 @@ import { Router } from '@angular/router';
 })
 export class ConfirmComponent {
   constructor(private router:Router){
-console.log('send')
   }
   return(){
     

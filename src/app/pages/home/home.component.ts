@@ -29,9 +29,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('Home');
+
     this.init();
-  
+
     setTimeout(() => {
       this.showSpinner = false;
     }, 2000);
@@ -41,21 +41,23 @@ export class HomeComponent implements OnInit {
   }
 
   init() {
-    
-    let prevScrollpos = window.pageYOffset;
+
+    let prevScrollpos = window.scrollY;
     window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset;
+      let currentScrollPos = window.scrollY;
       const navbarExample2 = document.querySelector('#navbar-example2') as HTMLElement;
-      if (prevScrollpos > currentScrollPos) {
-        navbarExample2.classList.add('navbar-show');
-        navbarExample2.classList.remove('navbar-hide');
-      } else {
-        navbarExample2.classList.add('navbar-hide');
-        navbarExample2.classList.remove('navbar-show');
+      if (navbarExample2) {
+        if (prevScrollpos > currentScrollPos) {
+          navbarExample2.classList.add('navbar-show');
+          navbarExample2.classList.remove('navbar-hide');
+        } else {
+          navbarExample2.classList.add('navbar-hide');
+          navbarExample2.classList.remove('navbar-show');
+        }
       }
       prevScrollpos = currentScrollPos;
     }
-    
+
   }
 
   toggleNav() {

@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, take, tap } from 'rxjs';
 import { Email } from '../interfaces/email.interface';
@@ -8,8 +8,8 @@ import { Email } from '../interfaces/email.interface';
   providedIn: 'root'
 })
 export class EmailService {
-  base_url="https://ms-emails-production.up.railway.app/emails/send"
- 
+  base_url = "https://emails-ke70.onrender.com/emails/send"
+
   constructor(private http: HttpClient) { }
 
   sendEmail(email: Email): Observable<string> {
