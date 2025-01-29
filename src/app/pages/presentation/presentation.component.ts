@@ -95,13 +95,14 @@ export class PresentationComponent {
         prevScrollpos = currentScrollPos;
       }
     });
+
+  }
+
+  enviarCorreo() {
+    const email = 'tu@email.com';
+    const asunto = 'Interesado en desarrollo web';
+    const cuerpo = 'Hola Fidel, me gustaría obtener más información sobre tus servicios de desarrollo web.';
     
-    
-    
-    
-    
-    
-    
-    
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
   }
 }
