@@ -1,0 +1,30 @@
+<header class="minimal-header">
+    <div class="container">
+      <div class="header-content" [@fadeInUp]>
+        
+        <h1 class="title">
+            <span class="name">Fidel Huarcaya</span>
+            <div class="title-badge">
+              <i class="fas fa-code"></i>
+              Full Stack Developer
+            </div>
+          </h1> 
+        <p class="description">
+          <span class="role">Desarrollador de Software</span>
+          <span class="separator">|</span>
+          <span class="role">Innovador</span>
+          <span class="separator">|</span>
+          <span class="role">Solucionador de Problemas</span>
+        </p>
+        <a class="cta-button" (click)="showModal()">
+          <i class="fas fa-rocket"></i>
+          Iniciemos un proyecto
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <app-contact-modal 
+      *ngIf="isModalOpen" 
+      (close)="closeModal()"
+    ></app-contact-modal>

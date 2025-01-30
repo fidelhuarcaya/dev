@@ -1,0 +1,143 @@
+
+:host {
+  display: block;
+}
+
+.minimal-header {
+  background-color: #282c34;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header-content {
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #61dafb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #8892b0;
+    line-height: 1.6;
+    
+    .role {
+      color: #ccd6f6;
+      font-weight: 500;
+      display: inline-block;
+    }
+    
+    .separator {
+      margin: 0 0.75rem;
+      color: #61dafb;
+      display: inline-block;
+    }
+  }
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #61dafb;
+  color: #282c34;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  i {
+    font-size: 1rem;
+  }
+  
+  &:hover {
+    background-color: lighten(#61dafb, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    
+    .separator {
+      display: none;
+    }
+    
+    .role {
+      display: block;
+      margin: 0.25rem 0;
+    }
+  }
+  
+
+  
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+  
+    .name {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 0%, #64ffda 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      display: block;
+    }
+  
+    .title-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(100, 255, 218, 0.1);
+      border: 1px solid rgba(100, 255, 218, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      color: #64ffda;
+      margin-top: 1rem;
+  
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .title .name {
+      font-size: 1.75rem;
+    }
+    
+    .container {
+      padding: 0 1rem;
+    }
+  }
