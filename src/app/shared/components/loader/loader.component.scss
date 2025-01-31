@@ -8,12 +8,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
     padding: 1rem;
   }
 
   .loader-content {
-    background-color: #1a1e23;
+    background-color: transparent;
     border-radius: 1rem;
     padding: 2rem;
     display: flex;
