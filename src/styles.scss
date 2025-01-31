@@ -1,10 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/primeicons/primeicons.css';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import "../node_modules/primeflex/primeflex.css";
 
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #1a1e23;
+}
+
+.cta-button{
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+
+.input-error {
+    border: 2px solid #ff6b6b !important;
+    background-color: #ffecec;
+    outline: none;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
 }

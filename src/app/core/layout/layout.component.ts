@@ -5,6 +5,7 @@ import { ProjectsComponent } from '../../sections/projects/projects.component';
 import { AboutComponent } from '../../sections/about/about.component';
 import { ContactComponent } from '../../sections/contact/contact.component';
 import { FooterComponent } from '../../sections/footer/footer.component';
+import { FloatingNavComponent } from '../floating-nav/floating-nav.component';
 
 @Component({
   selector: 'app-layout',
@@ -16,6 +17,7 @@ import { FooterComponent } from '../../sections/footer/footer.component';
     AboutComponent,
     ContactComponent,
     FooterComponent,
+    FloatingNavComponent,
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'

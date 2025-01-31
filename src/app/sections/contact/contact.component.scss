@@ -106,6 +106,26 @@
     background-color: rgba(97, 218, 251, 0.1);
   }
   
+
+  @media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 4.5rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .library-card {
+        margin: 1.5rem;
+    }
+}
+
   @media (max-width: 480px) {
     .contact-form {
       padding: 1.5rem;
@@ -124,4 +144,8 @@
     .section-title {
       font-size: 2rem;
     }
+  }
+
+  .form-group label {
+    font-weight: 600;
   }

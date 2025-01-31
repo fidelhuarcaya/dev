@@ -1,0 +1,28 @@
+<div class="floating-nav" [class.expanded]="isExpanded">
+    <div class="nav-header" *ngIf="isExpanded">
+      <button class="close-button" (click)="toggleExpand()">
+        <i class="pi pi-angle-down"></i>
+      </button>
+    </div>
+    <div class="nav-icon" (click)="toggleExpand()" *ngIf="!isExpanded">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="nav-items" *ngIf="isExpanded">
+      <a (click)="scrollTo('header')" class="nav-item">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+      </a>
+      <a (click)="scrollTo('projects')" class="nav-item">
+        <i class="fas fa-code"></i>
+        <span>Proyectos</span>
+      </a>
+      <a (click)="scrollTo('about')" class="nav-item">
+        <i class="fas fa-user"></i>
+        <span>Sobre mí</span>
+      </a>
+      <a (click)="scrollTo('contact')" class="nav-item">
+        <i class="fas fa-envelope"></i>
+        <span>Contacto</span>
+      </a>
+    </div>
+  </div>

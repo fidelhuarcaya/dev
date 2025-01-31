@@ -1,6 +1,7 @@
 .projects-section {
     background-color: #1a1e23;
     padding: 5rem 0;
+    overflow: hidden;
 }
 
 .section-title {
@@ -22,31 +23,54 @@
     text-align: center;
 }
 
-.library-title,
 .web-title {
-    margin-top: 4rem;
+    margin-top: 6rem;
+}
+.library-title{
+    margin-top: 8rem;
 }
 
+.android-title {
+    margin-top: 5rem;
+}
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 1rem;
+    
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 2.5rem; // Aumentamos el espacio entre cards
+        padding: 1rem 1.5rem; // Más padding en los laterales
+    }
+    
 }
-
 .project-card {
     background-color: #282c34;
     border-radius: 0.5rem;
     padding: 2rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     border: 1px solid rgba(97, 218, 251, 0.1);
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    z-index: 1; 
 
     &:hover {
         transform: translateY(-5px);
         border-color: rgba(97, 218, 251, 0.3);
+        z-index: 2; 
+    }
+    
+    @media (max-width: 768px) {
+        margin: 0; 
+        padding: 1.75rem; 
+        
+        &:hover {
+            transform: translateY(-3px);
+        }
     }
 }
 
@@ -108,8 +132,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
 }
 
 .project-tech {
@@ -171,14 +194,14 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1012px) {
     .section-title {
         font-size: 2rem;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 4.5rem;
     }
 
     .project-card {
@@ -189,6 +212,8 @@
         margin: 1.5rem;
     }
 }
+
+
 
 @media (max-width: 480px) {
     .section-title {

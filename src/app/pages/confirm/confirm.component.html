@@ -1,6 +1,5 @@
-<div class="content-main" @slideDown>
-    <div class="card">
-
+<div class="content-main" >
+    <div class="card" @slideDown>
         <div class="header">
             <div class="image">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,31 +12,19 @@
                 </svg>
             </div>
             <div class="content">
-                <h3 class="title">Email sent</h3>
-                <p class="message">Your email has been sent successfully. I wanted to make sure you knew your message
-                    was delivered correctly. You will receive a response shortly.
+                <h3 class="title">Correo enviado</h3>
+                <p class="message">
+                    Tu correo ha sido enviado con éxito. Recibirás una respuesta en breve.
+                    Agradecemos tu paciencia durante el proceso de envío. Si tienes alguna otra pregunta o necesitas más ayuda, 
+                    no dudes en ponerte en contacto.<br><br>
 
-                    We appreciate your patience during the submission process. If you have any other questions or need
-                    further assistance, please don't hesitate to get in touch.
-
-                    Thanks for contacting me.
+                    
                 </p>
+                <p class="footer-message">Gracias por comunicarte conmigo.</p>
             </div>
-            <div style="display: flex; flex-direction: column; gap: 5; justify-content: center; align-items: center;">
-                <div style="margin-top: 4.2rem; ">
-                    <button pButton class="p-button-success" 
-                    (click)="return()"
-                    style="width: 14rem; align-content: center; align-items: center; justify-content: center; box-shadow: none;"  
-                    type="button">Back to home</button>
-                </div>
-                <div style="margin-top: 1.2rem;"> 
-                    <button pButton class="p-button-secondary"
-                    (click)="sendOtherEmail()"
-                    style="width: 14rem; align-content: center; align-items: center; justify-content: center;  box-shadow: none;"
-                    type="button">Send another email</button>
-                </div>
-
-
+            <div class="actions">
+                <button class="cta-button" (click)="return()" type="button">Volver al inicio</button>
+                <button class="cta-button secondary" (click)="sendOtherEmail()" type="button">Enviar otro correo</button>
             </div>
         </div>
     </div>

@@ -109,7 +109,8 @@
 .cta-container {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
 }
 
 .cta-button {
@@ -170,6 +171,10 @@
         
         justify-content: center;
     }
+
+    .section-title {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -189,3 +194,4 @@
         font-size: 0.75rem;
     }
 }
+

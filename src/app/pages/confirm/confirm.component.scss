@@ -1,116 +1,131 @@
 .card {
-    overflow: hidden;
-    
-    text-align: left;
-    border-radius: 0.5rem;
-    max-width: 50%;
-    min-height: 70vh;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    background-color: #2a2b38;
-  }
-  
-  
-  .header {
-    padding: 1.25rem 1rem 1rem 1rem;
-  }
-  
-  .image {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #38f88b;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 9999px;
-    animation: animate .6s linear alternate-reverse infinite;
-    transition: .6s ease;
-  }
-  
-  .image svg {
-    color: #0afa2a;
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  .content {
-    margin-top: 1.75rem;
-    text-align: center;
-  }
-  
-  .title {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-  }
-  
-  .message {
-    margin-top: 2.5rem;
-    color: #e9e5e5;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  
-  .actions {
-    margin: 3.75rem 3rem;
-  }
-  
-  .history {
-    display: inline-flex;
-    padding: 0.5rem 1rem;
-    background-color: #1aa06d;
-    color: #ffffff;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 500;
-    justify-content: center;
-    width: 100%;
-    border-radius: 0.375rem;
-    border: none;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  }
-  
-  .track {
-    display: inline-flex;
-    margin-top: 0.75rem;
-    padding: 0.5rem 1rem;
-    color: #242525;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 500;
-    justify-content: center;
-    width: 100%;
-    border-radius: 0.375rem;
-    border: 1px solid #D1D5DB;
-    background-color: #fff;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  }
-  
-  @keyframes animate {
-    from {
+  overflow: hidden;
+  text-align: left;
+  border-radius: 0.5rem;
+  width: 50%;
+  min-height: 70vh;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background-color: #2a2b38;
+  padding: 1.5rem;
+}
+
+/* Centrar todo */
+.content-main {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  background-color: #1a1e23;
+}
+
+/* Estilos de la cabecera */
+.header {
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  margin: 0 auto;
+  background-color: #61dafb;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  animation: animate .6s linear alternate-reverse infinite;
+  transition: .6s ease;
+}
+
+.image svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.content {
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.message {
+  margin-top: 1.5rem;
+  color: #e9e5e5;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: start;
+}
+
+.footer-message{
+  margin-top: 1.5rem;
+  color: #e9e5e5;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+/* Botones */
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.cta-button {
+  width: 50%;
+  background-color: #61dafb;
+  color: #282c34;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4db8d1;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+}
+
+.cta-button.secondary:hover {
+  background-color: rgba(97, 218, 251, 0.1);
+}
+
+/* Animación */
+@keyframes animate {
+  from {
       transform: scale(1);
-    }
-  
-    to {
+  }
+  to {
       transform: scale(1.2);
-    }
+  }
+}
+
+/* 🔹 Diseño responsivo para móviles */
+@media (max-width: 768px) {
+  .card {
+      width: 90%;
+      min-height: auto;
+      padding: 1rem;
   }
 
-
-  .content-main{
-    display: grid;
-    height: 100vh;
-    width: 100%;
-    margin-bottom: 0%;
-    bottom: 0;
- 
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    gap: 25px;
-
+  .actions {
+      width: 100%;
   }
+
+  .cta-button {
+      width: 100%;
+  }
+}
