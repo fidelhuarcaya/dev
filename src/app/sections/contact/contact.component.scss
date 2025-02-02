@@ -149,3 +149,46 @@
   .form-group label {
     font-weight: 600;
   }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: rgba(97, 218, 251, 0.05);
+    border: 1px solid rgba(97, 218, 251, 0.2);
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+
+    &:focus {
+      outline: none;
+      border-color: #61dafb;
+      background-color: rgba(97, 218, 251, 0.05);
+    }
+
+    &::placeholder {
+      color: #8892b0;
+    }
+
+    /* Estilos para autocompletado */
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px #1a1e23 inset !important;
+      -webkit-text-fill-color: #ffffff !important;
+      caret-color: #ffffff !important;
+      border-color: rgba(97, 218, 251, 0.2);
+    }
+    
+    /* Firefox autocompletado */
+    &:-moz-autofill,
+    &:-moz-autofill:hover,
+    &:-moz-autofill:focus {
+      background-color: rgba(97, 218, 251, 0.05) !important;
+      color: #ffffff !important;
+      border-color: rgba(97, 218, 251, 0.2);
+    }
+  }
