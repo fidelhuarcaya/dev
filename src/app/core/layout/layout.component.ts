@@ -31,14 +31,14 @@ export class LayoutComponent implements OnInit {
   emailService = inject(EmailService);
 
   ngOnInit(): void {
-    this.checkHealt()
+    //this.checkHealt()
   }
-  checkHealt() {
+  /*checkHealt() {
     this.emailService.sendEmail({
       email: '',
       name: '',
       message: ''
     }).subscribe(() => {
     });
-  }
+  }*/
 }

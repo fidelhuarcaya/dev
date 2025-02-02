@@ -11,6 +11,13 @@ import { Component, HostListener } from '@angular/core';
 export class FloatingNavComponent {
   isExpanded = false;
 
+  menuItems = [
+    { id: 'header', label: 'Inicio', icon: 'fa-home' },
+    { id: 'projects', label: 'Proyectos', icon: 'fa-code' },
+    { id: 'about', label: 'Sobre mí', icon: 'fa-user' },
+    { id: 'contact', label: 'Contacto', icon: 'fa-envelope' }
+  ];
+
   toggleExpand() {
     this.isExpanded = !this.isExpanded;
   }

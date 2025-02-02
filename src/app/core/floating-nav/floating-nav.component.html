@@ -1,28 +1,18 @@
 <div class="floating-nav" [class.expanded]="isExpanded">
-    <div class="nav-header" *ngIf="isExpanded">
-      <button class="close-button" (click)="toggleExpand()">
-        <i class="pi pi-angle-down"></i>
-      </button>
-    </div>
-    <div class="nav-icon" (click)="toggleExpand()" *ngIf="!isExpanded">
-      <i class="fas fa-bars"></i>
-    </div>
-    <div class="nav-items" *ngIf="isExpanded">
-      <a (click)="scrollTo('header')" class="nav-item">
-        <i class="fas fa-home"></i>
-        <span>Inicio</span>
-      </a>
-      <a (click)="scrollTo('projects')" class="nav-item">
-        <i class="fas fa-code"></i>
-        <span>Proyectos</span>
-      </a>
-      <a (click)="scrollTo('about')" class="nav-item">
-        <i class="fas fa-user"></i>
-        <span>Sobre mí</span>
-      </a>
-      <a (click)="scrollTo('contact')" class="nav-item">
-        <i class="fas fa-envelope"></i>
-        <span>Contacto</span>
-      </a>
+  <div class="fab-menu" [class.expanded]="isExpanded">
+    <div class="fab-menu-items">
+      <div class="fab-item-container"
+           *ngFor="let item of menuItems; let i = index"
+           [style.animation-delay]="isExpanded ? (i * 0.1) + 's' : (i* 0.1) + 's'">
+        <span class="item-label">{{item.label}}</span>
+        <button class="fab-item" (click)="scrollTo(item.id)">
+          <i class="fas {{item.icon}}"></i>
+        </button>
+      </div>
     </div>
   </div>
+
+  <button class="fab-main" (click)="toggleExpand()" [class.active]="isExpanded">
+    <i class="fas" [class.fa-times]="isExpanded" [class.fa-bars]="!isExpanded"></i>
+  </button>
+</div>
